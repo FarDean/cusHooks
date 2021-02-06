@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# A project for practicing custom hooks!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+### Packages used:
+axios
+evergreen UI
