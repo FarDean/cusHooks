@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React,{useState} from 'react'
 import './App.css';
+import useFetch from "./hooks/useFetch";
 
 function App() {
+  const [name, setName] = useState('')
+  const [query, setQuery] = useState('')
+    const {...state} =useFetch(query)
+
+    console.log(state);
+
+    function onSubmit(e) {
+      e.preventDefault()
+      setQuery(name)
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <form
+    onSubmit={onSubmit}
+    >
+      <label htmlFor="name">Name:</label>
+      <input onChange={e=>setName(e.target.value)} type="text" name="name" id="name"/>
+      <button>Submit</button>
+    </form>
+    </>
   );
 }
 
