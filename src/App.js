@@ -1,8 +1,7 @@
 import React,{useState,useEffect} from 'react'
-import './App.css';
 import useFetch from "./hooks/useFetch";
 import { Button,Pane,Heading,TextInput,Dialog,Spinner } from 'evergreen-ui'
-
+import './App.css'
 function App() {
   const [name, setName] = useState('')
   const [query, setQuery] = useState('')
