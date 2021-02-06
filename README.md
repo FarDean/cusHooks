@@ -2,4 +2,10 @@
 
 ### Packages used:
 axios
-evergreen UI
+evergreen + UI
+
+### Deployed with:
+surge
+
+### Live @:
+<http://soggy-alley.surge.sh>
